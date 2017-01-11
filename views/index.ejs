@@ -6,12 +6,12 @@
 </head>
 <body>
     <% include templates/header.ejs %>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= name %>'s bucket list</p>
+    <h1><%= title %> Dishes</h1>
+    <h3><%= videodata.categoryName %></h3>
     <ul>
-        <% for (var i = 0; i < 5; i++ ){ %>
-        <li>nothing...</li>
-        <% } %>
+        <% videodata.categories.forEach(function (item) { %>
+            <li><%= item.categoryName %></li>
+        <% }) %>
     </ul>
 </body>
 </html>
